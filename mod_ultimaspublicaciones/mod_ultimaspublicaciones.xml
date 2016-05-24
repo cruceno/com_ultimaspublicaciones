@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension
+  type="module"
+  version="3.0"
+  method="upgrade"
+  client="site">	
+    <name>Utimas Publicaciones</name>
+    <creationDate>Mayo 2016</creationDate>
+    <author>Javier Cruceño</author> 
+    <authorEmail>cruceno@ifir-conicet.gov.ar</authorEmail>
+    <authorUrl>http://ifir-conicet.gov.ar</authorUrl>
+    <copyright>Copyright (C) 2016 Instituto de Física Rosario. Todos los derechos reservados.</copyright>
+    <license>GNU GPL</license>
+    <version>1.0.0</version>
+  <description>Muestra una lista de las ultimas publicaciones cientificas de los miembros del Instituto de Física Rosario.</description>
+  <files>
+    <filename module="mod_latestextensions">mod_ultimaspublicaciones.php</filename>
+    <filename>helper.php</filename>
+    <filename>index.html</filename>
+    <folder>tmpl</folder>
+  </files>
+  <languages>
+  	<language tag="en-GB">language/en-GB/en-GB.mod_ultimaspublicaciones.ini</language>
+  	<language tag="es-ES">language/es-ES/es-ES.mod_ultimaspublicaciones.ini</language>
+  </languages>
+  <media destination="mod_ultimaspublicaciones" folder="media">
+    <filename>index.html</filename>
+    <folder>css</folder>
+  </media>
+  <config>
+  	<fields name="params">
+      <fieldset name="basic">
+        <field 
+          name="count" 
+          type="text" 
+          default="5" 
+          label="MOD_ULTIMASPUBLICACIONES_COUNT_LABEL" 
+          description="MOD_ULTIMASPUBLICACIONES_COUNT_DESCRIPTION" />		
+      </fieldset>
+      <fieldset name="advanced">
+	    <field
+      	  name="layout"
+    	  type="modulelayout"
+    	  label="JFIELD_ALT_LAYOUT_LABEL"
+    	  description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+        <field
+          name="moduleclass_sfx"
+          type="text"
+          label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+          description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+      </fieldset>
+    </fields>
+  </config>
+</extension>
